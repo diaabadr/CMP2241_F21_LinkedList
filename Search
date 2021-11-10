@@ -1,0 +1,17 @@
+#include "LinkedList.h"
+
+
+LinkedList::LinkedList() {};
+
+int LinkedList::Search(int key) {
+	Node* ptr = head;
+	int index=0;
+	while (ptr!=NULL)
+	{
+		if (ptr->data == key)
+			return index;
+		ptr = ptr->Next;
+		index++;
+	}
+	return -1;
+}
